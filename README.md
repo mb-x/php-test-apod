@@ -46,3 +46,19 @@ When you finish this challenge, send a link to your repository by email.
 The only constraint is to use PHP (use the version you want) and this Symfony project. You will then use any library you want, any database you want.
 
 And most of all, have fun!
+
+# Solution Code Docs
+**Step 1**: make a CLI command that will be executed each day to fetch the picture of the day ;
+
+**The command checks first if the image of the day is already saved. If it is not, it will call the api and save the image in the database (only if the media type is image). Make sure to set the API KEY in the .env file**
+
+**Step 2**: make a page to display the picture of the day. If there is no picture (say the picture of the day is a video) we will display the picture of the previous day ;
+
+**For this purpose, this page display always the last image saved in the database. The check of the media type is done beforehand in the CLI.**
+
+**Step 3**: protect our app, so the picture will only be visible by a logged in user. The user will be able to connect with a Google account using Google as login provider ;
+
+**The bundle knpuniversity/oauth2-client-bundle is used for this purpose, make sure to set google client ID and secret in the .env file**
+
+**Step 4**: make a small documentation explaining what you did, the technologies you used etc.
+**Hope this small doc you're reading is enough :)**

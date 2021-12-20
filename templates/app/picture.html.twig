@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% if image is not null %}
+        <img src="{{ asset('images/' ~ image.image) }}"/>
+        <p>{{ image.explanation }}</p>
+    {% endif %}
+
+{% endblock %}
